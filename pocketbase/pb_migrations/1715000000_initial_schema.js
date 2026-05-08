@@ -9,7 +9,6 @@ migrate((db) => {
   const users = dao.findCollectionByNameOrId("users");
 
   const usersExtra = [
-    { name: "username",  type: "text",   required: false, options: { min: null, max: null, pattern: "" } },
     { name: "full_name", type: "text",   required: false, options: { min: null, max: null, pattern: "" } },
     { name: "bio",       type: "text",   required: false, options: { min: null, max: null, pattern: "" } },
     { name: "city",      type: "text",   required: false, options: { min: null, max: null, pattern: "" } },
