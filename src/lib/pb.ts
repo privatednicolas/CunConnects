@@ -5,7 +5,7 @@ export const pb = new PocketBase(import.meta.env.VITE_PB_URL || "https://cunconn
 // Helper: URL pública de un archivo almacenado en PocketBase
 export function getFileUrl(record: { collectionId?: string; collectionName?: string; id: string; [key: string]: unknown }, filename: string | null | undefined): string | null {
   if (!filename) return null;
-  return pb.getFileUrl(record as Parameters<typeof pb.getFileUrl>[0], filename);
+  return pb.files.getURL(record as any, filename);
 }
 
 // Helper: imagen fallback
