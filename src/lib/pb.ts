@@ -1,6 +1,6 @@
 import PocketBase from 'pocketbase';
 
-export const pb = new PocketBase(import.meta.env.VITE_PB_URL || 'http://127.0.0.1:8090');
+export const pb = new PocketBase("https://cunconnects-pb.onrender.com");
 
 // Helper: URL pública de un archivo almacenado en PocketBase
 export function getFileUrl(record: { collectionId?: string; collectionName?: string; id: string; [key: string]: unknown }, filename: string | null | undefined): string | null {
